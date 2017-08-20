@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri:  https://github.com/wan-xiaowei/spring-cloud-config.git
+          username: 260483900@qq.com
+          password: wxw260483
