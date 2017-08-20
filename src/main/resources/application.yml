@@ -10,3 +10,7 @@ spring:
           uri:  https://github.com/wan-xiaowei/spring-cloud-config.git
           username: 260483900@qq.com
           password: wxw260483
+logging:
+  level:
+      org.springframework.cloud: debug
+      org.springframework.boot: debug
