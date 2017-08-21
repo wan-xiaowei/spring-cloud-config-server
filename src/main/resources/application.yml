@@ -10,7 +10,25 @@ spring:
           uri:  https://github.com/wan-xiaowei/spring-cloud-config.git
           username: 260483900@qq.com
           password: wxw260483
+        health:
+          repositories:
+            a-me:
+              label: config-v1.0
+              name: me
+              profiles: dev
+    bus:
+      trace:
+        enabled: true  # 开启cloud bus的跟踪   （post请求 localhost:8080/bus/refresh） 访问/trace可见传播行为
+      #destination: {spring.application.name}:{server.port}     局部刷新port可以用**表示
+
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
 logging:
   level:
       org.springframework.cloud: debug
       org.springframework.boot: debug
+encrypt:
+  key: wxw
